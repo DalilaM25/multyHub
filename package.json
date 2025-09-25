@@ -1,0 +1,24 @@
+{
+  "name": "teamhub-platform",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "initstart": "npm install && npm-run-all install build --parallel preview dev:host",
+    "start": "npm-run-all --parallel preview dev:host",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:host": "cd react-host && npm run dev",
+    "dev:remote": "cd vue-remote && npm run dev",
+    "build": "npm-run-all build:host build:remote",
+    "build:host": "cd react-host && npm run build",
+    "build:remote": "cd vue-remote && npm run build",
+    "preview": "npm-run-all --parallel preview:*",
+    "preview:remote": "cd vue-remote && npm run preview",
+    "install": "npm-run-all install:host install:remote",
+    "install:host": "cd react-host && npm install",
+    "install:remote": "cd vue-remote && npm install",
+    "clean": "rm -rf node_modules */node_modules */dist"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
