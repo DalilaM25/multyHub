@@ -1,0 +1,6 @@
+[submodule "react-host"]
+	path = react-host
+	url = https://github.com/DalilaM25/react-host.git
+[submodule "vue-remote"]
+	path = vue-remote
+	url = https://github.com/DalilaM25/vue-remote.git
